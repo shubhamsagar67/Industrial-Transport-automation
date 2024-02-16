@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type"/>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="ScriptsBundle" name="author">
+    <title>Logistic Pro Modern Multipurpose Services Template</title>
+    <!-- =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/images/favicon.ico" rel="icon"
+          type="image/x-icon"/>
+    <!-- =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-= -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1"
+          name="viewport">
+    <!-- =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/bootstrap.css" rel="stylesheet">
+    <!-- =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/style.css" rel="stylesheet">
+    <!-- =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/font-awesome.css"
+          rel="stylesheet"
+          type="text/css">
+    <!-- =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/et-line-fonts.css"
+          rel="stylesheet"
+          type="text/css">
+    <!-- =-=-=-=-=-=-= Magnific PopUP CSS =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/magnific-popup.css"
+          rel="stylesheet">
+    <!-- =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/owl.carousel.css" rel="stylesheet"
+          type="text/css">
+    <link href="../../static/userResources/css/owl.style.css" rel="stylesheet"
+          type="text/css">
+    <!-- =-=-=-=-=-=-= Google Fonts =-=-=-=-=-=-= -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic,900italic,900,300,300italic"
+          rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+          rel="stylesheet" type="text/css">
+    <!-- =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-= -->
+    <link href="../../static/userResources/css/flaticon.css" rel="stylesheet">
+    <!-- Theme Color -->
+    <link href="../../static/userResources/css/defualt.css" id="color"
+          rel="stylesheet">
+    <!-- For Style Switcher -->
+    <link href="#" id="theme-color" rel="stylesheet" type="text/css"/>
+    <!-- Animation Css -->
+    <link href="../../static/userResources/css/animate.min.css"
+          rel="stylesheet">
+    <!-- Menu Hover -->
+    <link href="../../static/userResources/css/bootstrap-dropdownhover.min.css"
+          rel="stylesheet">
+    <link href="../../static/userResources/css/star.css" rel="stylesheet">
+    <!-- JavaScripts -->
+    <script src="../../static/userResources/js/modernizr.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- =-=-=-=-=-=-= HEADER =-=-=-=-=-=-= -->
+
+{% include 'user/header.html' %}
+
+<!-- =-=-=-=-=-=-= HEADER END =-=-=-=-=-=-= -->
+
+
+<!-- =-=-=-=-=-=-= PAGE BREADCRUMB =-=-=-=-=-=-= -->
+<section class="breadcrumbs-area parallex">
+    <div class="container">
+        <div class="row">
+            <div class="page-title">
+                <div class="col-sm-12 col-md-7 page-heading text-left">
+                    <h2>Complain</h2>
+                </div>
+                <div class="col-sm-12 col-md-5 text-right">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">Complain</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =-=-=-=-=-=-= PAGE BREADCRUMB END =-=-=-=-=-=-= -->
+
+<!-- =-=-=-=-=-=-= Blog & News =-=-=-=-=-=-= -->
+<section class="custom-padding" id="blog">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <!-- full Content Area -->
+            <div class="col-sm-12 col-xs-12 col-md-12">
+
+                <div class="clearfix"></div>
+
+                <!-- blog-comment section -->
+
+
+                <!-- blog-comment feedback -->
+                <div class="blog-section">
+
+                    <div class="custom-heading">
+                        <h2>Post Complain</h2>
+                    </div>
+
+                    <form action="/user/insert_complain" method="post"
+                          name="commentform">
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input class="form-control" id="comment"
+                                           name="userComplainSubject"
+                                           placeholder="Enter Your Complain Subject"
+                                           type="text">
+                                </div>
+                            </div>
+                            <!-- End col-sm-6 -->
+
+                            <div class="col-sm-12">
+                                <!-- Comment -->
+                                <div class="form-group">
+                                    <textarea class="form-control"
+                                              id="comment"
+                                              name="userComplainDescription"
+                                              placeholder="Enter About Your Complain..."
+                                              rows="5"></textarea>
+                                </div>
+                            </div>
+                            <!-- End col-sm-12 -->
+
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary" id="send"
+                                        type="submit">Post
+                                </button>
+                            </div>
+                            <!-- End col-sm-6 -->
+
+                        </div>
+                        <!-- End row -->
+
+                    </form>
+
+                </div>
+                <!-- blog-comment feedback end -->
+
+
+                <div class="blog-section">
+
+                    <div class="custom-heading">
+                        <h2> Complaint</h2>
+                    </div>
+
+                    <div class="comment-list">
+                        <!-- comment -->
+                        {% if complain_vo_updated_list %}
+                        {% for complain_vo_data in complain_vo_updated_list %}
+                        <div class="comment">
+                            <div class="comment-info" style="border: 0px">
+                                <img alt="author"
+                                     class="pull-left"
+                                     src="../../static/userResources/images/blog/comment.png">
+                                <div class="author-desc">
+                                    <div class="author-title">
+                                        <strong>{{
+                                            complain_vo_data[0]['login_username']
+                                            }}</strong>
+                                        <ul class="list-inline pull-right">
+                                            <li>
+                                                {{
+                                                complain_vo_data[1]['complain_datetime']
+                                                }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p style="margin: 0px">{{
+                                        complain_vo_data[1]['complain_subject']
+                                        }}</p>
+                                    <p>{{
+                                        complain_vo_data[1]['complain_description']
+                                        }}</p>
+                                </div>
+                            </div>
+                            <!-- .comment-info -->
+                        </div>
+                        {% if complain_vo_data[1]['complain_reply_description']
+                        != None %}
+                        <div class="comment" style="margin-left: 250px">
+                            <div class="comment-info" style="border: 0px">
+                                <img alt="author"
+                                     class="pull-left"
+                                     src="../../static/userResources/images/blog/comment.png">
+                                <div class="author-desc">
+                                    <div class="author-title">
+                                        <strong>{{ admin_login_username
+                                            }}</strong>
+                                        <ul class="list-inline pull-right">
+                                            <li>
+                                                {{
+                                                complain_vo_data[1]['complain_reply_datetime']
+                                                }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>{{
+                                        complain_vo_data[1]['complain_reply_description']
+                                        }}</p>
+                                </div>
+                            </div>
+                            <!-- .comment-info -->
+                        </div>
+                        <hr>
+                        {% endif %}
+
+                        {% endfor %}
+                        {% endif %}
+                        <!-- .comment -->
+                    </div>
+
+                </div>
+                <!-- blog-comment section end-->
+
+
+            </div>
+            <!-- full Content Area -->
+
+
+        </div>
+        <!-- Row End -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- =-=-=-=-=-=-= Blog & News end =-=-=-=-=-=-= -->
+
+<!-- =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-= -->
+
+
+{% include 'user/footer.html' %}
+
+<!-- =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-= -->
+<script src="../../static/userResources/js/jquery.min.js"></script>
+<!-- Bootstrap Core Css  -->
+<script src="../../static/userResources/js/bootstrap.min.js"></script>
+<!-- Dropdown Hover  -->
+<script src="../../static/userResources/js/bootstrap-dropdownhover.min.js"></script>
+<!-- Jquery Easing -->
+<script src="../../static/userResources/js/easing.js"
+        type="text/javascript"></script>
+<!-- Jquery Counter -->
+<script src="../../static/userResources/js/jquery.countTo.js"></script>
+<!-- Jquery Waypoints -->
+<script src="../../static/userResources/js/jquery.waypoints.js"></script>
+<!-- Jquery Appear Plugin -->
+<script src="../../static/userResources/js/jquery.appear.min.js"></script>
+<!-- Jquery Shuffle Portfolio -->
+<script src="../../static/userResources/js/jquery.shuffle.min.js"></script>
+<!-- Carousel Slider  -->
+<script src="../../static/userResources/js/carousel.min.js"></script>
+<!-- Jquery Migrate -->
+<script src="../../static/userResources/js/jquery-migrate.min.js"></script>
+<!--Style Switcher -->
+<script src="../../static/userResources/js/color-switcher.js"></script>
+<!-- Gallery Magnify  -->
+<script src="../../static/userResources/js/jquery.magnific-popup.min.js"></script>
+<!-- Sticky Bar  -->
+<script src="../../static/userResources/js/theia-sticky-sidebar.js"></script>
+<!-- Template Core JS -->
+<script src="../../static/userResources/js/custom.js"></script>
+
+</body>
+
+</html>

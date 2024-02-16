@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>BoardsterUI Admin</title>
+    <!-- plugins:css -->
+    <link href="../../static/adminResources/css/materialdesignicons.min.css"
+          rel="stylesheet">
+    <link href="../../static/adminResources/css/vendor.bundle.base.css"
+          rel="stylesheet">
+    <link href="../../static/adminResources/css/vendor.bundle.addons.css"
+          rel="stylesheet">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link href="../../static/adminResources/css/style.css" rel="stylesheet">
+    <!-- endinject -->
+    <link href="../../static/adminResources/images/favicon.png"
+          rel="shortcut icon"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+
+    {% include 'admin/header.html' %}
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+
+
+        {% include 'admin/menu.html' %}
+
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">view Agency</h4>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table" id="order-listing">
+                                        <thead>
+                                        <tr>
+                                            <th>Agency Name</th>
+                                            <th>Agency Address</th>
+                                            <th>Agency Contact</th>
+                                            <th>Agency City</th>
+                                            <th>Agency State</th>
+                                            <th>Agency Contact Person</th>
+                                            <th>Agency Register Date</th>
+                                            <th>Agency Register No.</th>
+                                            <th>Agency Register email</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        {% for row in agency_vo_list %}
+                                            <tr>
+                                        <td>{{ row[3]['agency_name'] }}</td>
+                                        <td>{{ row[3]['agency_address'] }}</td>
+                                        <td>{{ row[3]['agency_contact'] }}</td>
+                                        <td>{{ row[1]['city_name'] }}</td>
+                                        <td>{{ row[0]['state_name'] }}</td>
+                                        <td>{{ row[3]['agency_contactperson']
+                                            }}
+                                        </td>
+                                        <td>{{ row[3]['agency_registerdate']
+                                            }}
+                                        </td>
+                                        <td><a href="
+
+
+
+                                                    {{ row[3]['agency_certificate_filepath'] }}{{ row[3]['agency_certificate_filename'] }}">View</a>
+                                        </td>
+                                        <td>{{ row[2]['login_username'] }}</td>
+
+                                        <td>
+                                            <button class="btn btn-outline-primary btn-fw"
+                                                    type="button">
+                                                Block
+                                            </button>
+
+                                            <button class="btn btn-outline-primary btn-fw"
+                                                    type="button">
+                                                Unblock
+                                            </button>
+                                        </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+
+            {% include 'admin/footer.html' %}
+
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/data-table.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>

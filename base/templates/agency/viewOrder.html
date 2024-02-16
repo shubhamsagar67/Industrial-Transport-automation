@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>BoardsterUI Admin</title>
+    <!-- plugins:css -->
+    <link href="../../static/adminResources/css/materialdesignicons.min.css"
+          rel="stylesheet">
+    <link href="../../static/adminResources/css/vendor.bundle.base.css"
+          rel="stylesheet">
+    <link href="../../static/adminResources/css/vendor.bundle.addons.css"
+          rel="stylesheet">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link href="../../static/adminResources/css/style.css" rel="stylesheet">
+    <!-- endinject -->
+    <link href="../../static/adminResources/images/favicon.png"
+          rel="shortcut icon"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+
+    {% include 'agency/header.html' %}
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+
+
+        {% include 'agency/menu.html' %}
+
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">View Order</h4>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table" id="order-listing">
+                                        <thead>
+                                        <tr>
+                                            <th>Order Username</th>
+                                            <th>Order Date&Time</th>
+                                            <th>Order Amount</th>
+                                            <th>Order Delivery Duration</th>
+                                            <th>Order Transport Type</th>
+                                            <th>Order Pick-up Location</th>
+                                            <th>Order Destination Location</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for row in order_dict_list %}
+                                        <tr>
+                                            <td>{{ row['login_username'] }}
+                                            </td>
+                                            <td>{{ row['order_datetime'] }}
+                                            </td>
+                                            <td>{{ row['order_quotation_price']
+                                                }}
+                                            </td>
+                                            <td>{{
+                                                row['order_delivery_duration']
+                                                }} Days
+                                            </td>
+                                            <td>{{
+                                                row['order_transporttype_name']
+                                                }}
+                                            </td>
+                                            <td>{{ row['source_city_name']
+                                                }},{{ row['source_state_name']
+                                                }}
+                                            </td>
+                                            <td>{{ row['destination_city_name']
+                                                }},{{
+                                                row['destination_state_name']
+                                                }}
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+
+            {% include 'agency/footer.html' %}
+
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/data-table.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>

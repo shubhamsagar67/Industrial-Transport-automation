@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>BoardsterUI Admin</title>
+    <!-- plugins:css -->
+    <link href="../../static/adminResources/css/materialdesignicons.min.css"
+          rel="stylesheet">
+    <link href="../../static/adminResources/css/vendor.bundle.base.css"
+          rel="stylesheet">
+    <link href="../../static/adminResources/css/vendor.bundle.addons.css"
+          rel="stylesheet">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link href="../../static/adminResources/css/style.css" rel="stylesheet">
+    <link href="../../static/adminResources/css/star.css" rel="stylesheet">
+    <!-- endinject -->
+    <link href="../../static/adminResources/images/favicon.png"
+          rel="shortcut icon"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+
+    {% include 'agency/header.html' %}
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+
+
+        {% include 'agency/menu.html' %}
+
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+
+                <div class="row grid-margin">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Post Feedback</h4>
+                                <form action="/agency/insert_feedback" class="cmxform"
+                                      method="post">
+                                    <fieldset>
+                                        <div class="rate">
+                                            <input id="star5" name="rating"
+                                                   type="radio"
+                                                   value="5"/><label
+                                                for="star5"
+                                                title="text">5
+                                            stars</label>
+                                            <input id="star4" name="rating"
+                                                   type="radio"
+                                                   value="4"/><label
+                                                for="star4"
+                                                title="text">4
+                                            stars</label>
+                                            <input id="star3" name="rating"
+                                                   type="radio"
+                                                   value="3"/><label
+                                                for="star3"
+                                                title="text">3
+                                            stars</label>
+                                            <input id="star2" name="rating"
+                                                   type="radio"
+                                                   value="2"/><label
+                                                for="star2"
+                                                title="text">2
+                                            stars</label>
+                                            <input id="star1" name="rating"
+                                                   type="radio"
+                                                   value="1"/><label
+                                                for="star1"
+                                                title="text">1
+                                            star</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-group">
+                                        <textarea class="form-control"
+                                                  id="feedbackDescription"
+                                                  name="feedbackDescription"
+                                                  placeholder="Enter About Your Feedback..."></textarea>
+                                    </div>
+
+                                    <input class="btn btn-primary"
+                                           type="submit" value="Submit">
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row grid-margin">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">View Feedback</h4>
+                                {% if feedback_vo_list %}
+                                {% for feedback_vo_data in feedback_vo_list %}
+                                <div class="d-flex align-items-start profile-feed-item">
+                                    <img alt="profile"
+                                         class="img-sm rounded-circle"
+                                         src="../../static/adminResources/images/face3.jpg">
+                                    <div class="ml-4" style="width: 100%">
+                                        <h6>
+                                            {{
+                                            feedback_vo_data[0]['login_username']
+                                            }}
+                                            <small class="float-right">
+                                                {% for i in
+                                                range(feedback_vo_data[1]['feedback_rating'])
+                                                %}
+                                                <i class="mdi mdi-star"
+                                                   style="font-size: 20px"></i>
+                                                {% endfor %}
+                                            </small>
+                                        </h6>
+                                        <p>
+                                            {{
+                                            feedback_vo_data[1]['feedback_description']
+                                            }}
+                                        </p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {% include 'agency/footer.html' %}
+
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+    <script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="../../static/adminResources/js/off-canvas.js"></script>
+    <script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+    <script src="../../static/adminResources/js/template.js"></script>
+    <script src="../../static/adminResources/js/settings.js"></script>
+    <script src="../../static/adminResources/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../static/adminResources/js/form-validation.js"></script>
+    <script src="../../static/adminResources/js/bt-maxLength.js"></script>
+    <!-- End custom js for this page-->
+</div>
+</body>
+
+</html>
+{##}
+{#{% for i in range(row[0]['feedback_rating']) %}#}
+{#    <i class="mdi mdi-star"></i>#}
+{#{% endfor %}#}
